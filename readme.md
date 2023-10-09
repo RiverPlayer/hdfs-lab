@@ -10,6 +10,12 @@
 - `appendToFile` 向某HDFS文件中追加信息
 
 运行main方法，查看这些方法的使用案例。
+注意代码中： 
+```
+Configuration conf = new Configuration();
+conf.set("fs.defaultFS", "hdfs://192.168.133.200:9000");
+```
+fs.defaultFS设置为hdfs://ip:hdfs端口号(不同人的端口号不同,详细请参考在线文档)
 
 ## Exercise 
 
