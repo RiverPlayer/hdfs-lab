@@ -18,7 +18,7 @@ public class MergeFile {
     public static void doMerge(Configuration conf, Path inputDirPath, Path outputFilePath) throws IOException {
 
     }
-    public static void init(Configuration conf, Path inputDirPath, Path outputFilePath,Integer txtNum, Integer shNum){
+    public static void init(Configuration conf, Path inputDirPath, Path outputFilePath,Integer txtNum, Integer shNum) throws IOException {
 
     }
 

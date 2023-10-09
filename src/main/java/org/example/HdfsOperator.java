@@ -29,6 +29,14 @@ public class HdfsOperator {
             System.out.println("\nthe content of /example/test.txt is :");
             readFile(conf, "/example/test.txt");
 
+            // 判断 /example/test.txt 是否存在
+            if(existsPath(conf, "/example/test.txt")) System.out.println("/example/test.txt exists");
+            else System.out.println("/example/test.txt does not  exist");
+
+            // 判断 /example/test1.txt 是否存在
+            if(existsPath(conf, "/example/test1.txt")) System.out.println("/example/test1.txt exists");
+            else System.out.println("/example/test1.txt does not  exist");
+
             // Create a file in HDFS
             createFile(conf, "/example/test1.txt");
 
@@ -38,6 +46,7 @@ public class HdfsOperator {
             // Read a file from HDFS
             System.out.println("\nthe content of /example/test1.txt is :");
             readFile(conf, "/example/test1.txt");
+
 
             // list all files in /example
             System.out.println("\nall files in /example are :");
@@ -123,6 +132,13 @@ public class HdfsOperator {
 
         fs.close();
     }
+
+    public static boolean existsPath(Configuration conf, String pathName) throws IOException {
+        FileSystem fs = FileSystem.get(conf);
+        Path path = new Path(pathName);
+        return fs.exists(path);
+    }
+
     public static void uploadFile(Configuration conf, String localFilePath, String remoteFilePath) throws IOException {
         FileSystem fs = FileSystem.get(conf);
         Path localFile = new Path(localFilePath);

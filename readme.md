@@ -8,6 +8,7 @@
 - `readFile` 打印文件内容
 - `listFile` 列出某目录下的所有文件信息
 - `appendToFile` 向某HDFS文件中追加信息
+- `existsPath` 判断某个路径是否存在
 
 运行main方法，查看这些方法的使用案例。
 注意代码中： 
