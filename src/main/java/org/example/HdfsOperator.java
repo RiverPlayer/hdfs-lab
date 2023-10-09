@@ -30,12 +30,12 @@ public class HdfsOperator {
             readFile(conf, "/example/test.txt");
 
             // 判断 /example/test.txt 是否存在
-            if(existsPath(conf, "/example/test.txt")) System.out.println("/example/test.txt exists");
-            else System.out.println("/example/test.txt does not  exist");
+            if(existsPath(conf, "/example/test.txt")) System.out.println("\n/example/test.txt exists");
+            else System.out.println("\n/example/test.txt does not  exist");
 
             // 判断 /example/test1.txt 是否存在
-            if(existsPath(conf, "/example/test1.txt")) System.out.println("/example/test1.txt exists");
-            else System.out.println("/example/test1.txt does not  exist");
+            if(existsPath(conf, "/example/test1.txt")) System.out.println("/example/test1.txt exists\n");
+            else System.out.println("/example/test1.txt does not exist\n");
 
             // Create a file in HDFS
             createFile(conf, "/example/test1.txt");
